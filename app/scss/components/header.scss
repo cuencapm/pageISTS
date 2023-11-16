@@ -5,36 +5,50 @@
   top: 0;
   width: 100%;
   box-shadow: 0 3px 2px -2px rgba(6,112,132, 0.1);
-  padding-top: rem(12);
+  padding-top: rem(13);
   padding-bottom: rem(12);
   background: var(--white);
   z-index: 999;
+  @include breakpoint(xmedium) {
+    padding-top: rem(12);
+  }
 
   &__content{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 
-    @include breakpoint(medium) {
+    @include breakpoint(xmedium) {
       align-items: center;
     }
   }
 
   &__logo {
     display: flex;
-    font-size: rem(32);
-    font-weight: 700;
     align-items: center;
+    font-family: var(--font-raleway);
+    font-size: rem(20);
+    font-weight: 700;
+    color: var(--dark);
 
-    @include breakpoint(medium) {
-      width: auto;
+    img {
+      height: rem(40);
+      width: rem(40);
+      margin-right: rem(25);
+    }
+
+    span {
+      @include breakpoint-down(xmedium) {
+          display: none;
+      }
     }
   }
 }
 
 .navbar {
-  padding: rem(8);
+  padding: rem(5);
   display: flex;
+  align-items: center;
 
   &__list {
     top: rem(90);
@@ -49,11 +63,11 @@
     flex-direction: column;
     align-items: center;
     background: white;
-    border-radius: rem(10);
+    border-radius: rem(16);
     box-shadow: rgba(6,112,132, 0.1) 0px 2px 8px 0px;
     display: none;
 
-    @include breakpoint(medium){
+    @include breakpoint(xmedium){
       position: relative;
       background: transparent;
       display: flex;
@@ -72,7 +86,7 @@
   }
 
   &__link {
-    color: #16507b;
+    color: var(--istsazul) ;
     justify-content: space-between;
     font-size: rem(24);
     padding: rem(30) 0;
@@ -81,13 +95,15 @@
     margin: 0;
     width: 80vw;
 
-    @include breakpoint(medium){
+    @include breakpoint(xmedium){
       display: flex;
-      padding: rem(10) 0 rem(10) rem(30);
+      padding: rem(9) 0 rem(8) rem(30);
       align-items: center;
       justify-content: space-between;
-      font-size: rem(16);
-      color: #16507b;
+      font-size: rem(20);
+      font-weight: 700;
+      color: var(--istsazul);
+      font-family: var(--font-raleway);
       white-space: nowrap;
       width: auto;
     }
@@ -102,7 +118,7 @@
     margin-top: rem(6);
     margin-bottom: rem(6);
 
-    @include breakpoint(medium){
+    @include breakpoint(xmedium){
       display: none;
     }
   }

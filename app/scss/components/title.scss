@@ -1,14 +1,15 @@
 @use '../util' as *;
 
 .title {
+  color: var(--black);
   font-size: rem(40);
-  font-family: var(--font-raleway);
+  font-family: var(--font-pea);
   font-weight: 700;
   text-align: center;
   margin-top: rem(136);
   margin-bottom: rem(56);
 
   @include breakpoint(medium) {
-    font-size: rem(48);
+    font-size: rem(45);
   }
 }

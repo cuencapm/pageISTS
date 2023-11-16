@@ -20,7 +20,7 @@ burger.addEventListener('focusout', (e) => {
 
 function checkMediaQuery() {
   // If the inner width of the window is greater then 768px
-  if (window.innerWidth > 640) {
+  if (window.innerWidth > 856) {
     mobileNavbar.style.display = 'flex';
   } else {
     mobileNavbar.style.display = 'none';
