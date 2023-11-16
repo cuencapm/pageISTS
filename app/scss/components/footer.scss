@@ -1,0 +1,14 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  background: var(--white);
+  z-index: 999;
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
