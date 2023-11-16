@@ -30,6 +30,11 @@
       padding: rem(15) 0 rem(15) rem(15);
         color: var(--istsazul);
       }
+      img {
+        height: rem(32);
+        width: rem(32);
+        filter: invert(21%) sepia(21%) saturate(5563%) hue-rotate(203deg) brightness(99%) contrast(93%);
+      }
     }
   }
 
