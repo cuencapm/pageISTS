@@ -28,6 +28,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-self: center;
     @include breakpoint(medium) {
       text-align: left;
       display: block;
@@ -38,11 +39,16 @@
     grid-row-start: 1;
     justify-self: center;
     margin-bottom: rem(32);
+    display: flex;
 
     @include breakpoint(medium) {
       grid-column-start: 2;
       justify-self: end;
       margin-bottom: rem(0);
+    }
+
+    .red {
+      display: inline-flex;
     }
 
     img {
