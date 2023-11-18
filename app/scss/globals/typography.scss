@@ -1,5 +1,23 @@
 @use '../util' as *;
 
+@font-face {
+    font-family: 'Pea-Carlisle';
+    src:url('../../../fonts/pea/Pea-Carlisle.ttf.woff') format('woff'),
+        url('../../../fonts/pea/Pea-Carlisle.ttf.svg#Pea-Carlisle') format('svg'),
+        url('../../../fonts/pea/Pea-Carlisle.ttf.eot'),
+        url('../../../fonts/pea/Pea-Carlisle.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --font-pea: 'Pea-Carlisle';
+  --font-walkway: 'Walkway Black', sans-serif;
+  --font-walkwayb: 'Walkway Bold', sans-serif;
+  --font-raleway: 'Raleway', sans-serif;
+  --font-jshine: 'Jushley Shine', sans-serif;
+}
+
 h1,
 h2,
 h3 {
@@ -18,7 +36,6 @@ h1 {
 h2 {
   font-size: rem(24);
   margin-bottom: rem(24);
-  color: var(--text-color2);
 }
 
 a,

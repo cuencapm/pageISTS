@@ -6,10 +6,10 @@
   font-family: var(--font-raleway);
   font-weight: 700;
   text-align: center;
-  margin-top: rem(136);
-  margin-bottom: rem(56);
+  margin-top: rem(112);
+  margin-bottom: rem(48);
 
   @include breakpoint(medium) {
-    font-size: rem(45);
+    font-size: rem(48);
   }
 }

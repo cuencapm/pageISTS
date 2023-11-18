@@ -1,126 +1,151 @@
 @use '../util' as *;
 
-.header {
-  position: fixed;
+#header {
   top: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: var(--navbar-height);
+  background-color: var(--white);
   box-shadow: 0 3px 2px -2px rgba(6,112,132, 0.1);
-  padding-top: rem(13);
-  padding-bottom: rem(12);
-  background: var(--white);
   z-index: 999;
-  @include breakpoint(xmedium) {
-    padding-top: rem(12);
-  }
+}
 
-  &__content{
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-
-    @include breakpoint(xmedium) {
-      align-items: center;
-    }
-  }
+// Configuraciones para mobile
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
 
   &__logo {
+    height: rem(46);
+    width: auto;
+  }
+  &__item {
+    width: 100%;
+  }
+
+  &__burger {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
-    font-family: var(--font-raleway);
-    font-size: rem(20);
-    font-weight: 700;
-    color: var(--dark);
+    justify-content: center;
+    flex-direction: column;
 
-    img {
-      height: rem(45);
-      width: auto;
-      margin-right: rem(25);
+    .icon-bar {
+      display: block;
+      border-radius: rem(16);
+      width: 25px;
+      height: 4px;
+      margin: 2px;
+      background-color: var(--istsverde);
     }
 
-    span {
-      @include breakpoint-down(xmedium) {
-          display: none;
+    &[aria-expanded="true"] {
+      .icon-bar {
+        &:first-child, &:last-child {
+          position: absolute;
+          margin: 0;
+          width: 30px;
+        }
+        &:first-child {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+        }
       }
     }
   }
-}
 
-.navbar {
-  padding: rem(5);
-  display: flex;
-  align-items: center;
-
-  &__list {
-    top: rem(90);
-    left: rem(30);
-    right: rem(30);
-    overflow: hidden;
-    position: fixed;
-    z-index: 9;
-    margin: 0;
+  &__links {
     list-style: none;
-    padding: 0;
+    position: absolute;
+    background-color: var(--white);
+    display: flex;
     flex-direction: column;
     align-items: center;
-    background: white;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: rem(5) rem(30);
     border-radius: rem(16);
-    box-shadow: rgba(6,112,132, 0.1) 0px 2px 8px 0px;
-    display: none;
-
-    @include breakpoint(xmedium){
-      position: relative;
-      background: transparent;
-      display: flex;
-      flex-direction: row;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      align-items: center;
-      width:auto;
-      left: auto;
-      right: auto;
-      top: auto;
-      border-radius: 0;
-      box-shadow: none;
-    }
+    box-shadow: rgba(6,112,132, 0.1) 0px 1px 3px 0px, rgba(6,112,132, 0.1) 2px 2px 3px 0px;
   }
 
   &__link {
-    color: var(--istsazul) ;
-    justify-content: space-between;
-    font-size: rem(24);
-    padding: rem(30) 0;
-    text-align: center;
-    display: inline-block;
-    margin: 0;
-    width: 80vw;
+    color: var(--istsazul);
+    text-decoration: none;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: rem(25);
+    border-radius: rem(16);
 
-    @include breakpoint(xmedium){
-      display: flex;
-      padding: rem(9) 0 rem(8) rem(30);
-      align-items: center;
-      justify-content: space-between;
-      font-size: rem(20);
-      font-weight: 700;
-      color: var(--istsazul);
-      font-family: var(--font-raleway);
-      white-space: nowrap;
-      width: auto;
+    &:focus, &:hover {
+      color: var(--verde);
+      background-color: var(--light);
     }
   }
-  &__toggle {
-    padding: 0;
-    cursor: pointer;
-    line-height: 0;
-    display: inline-block;
-    height: 28px;
-    z-index: 10;
-    margin-top: rem(6);
-    margin-bottom: rem(6);
 
-    @include breakpoint(xmedium){
+  #navbar-menu {
+    position: fixed;
+    top: var(--navbar-height);
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar__burger[aria-expanded="true"] + #navbar-menu {
+    background-color: rgba(0, 20, 20, 0.3);
+    opacity: 1;
+    visibility: visible;
+    transition: transform 150ms linear, opacity 150ms ease;
+  }
+
+// Configuraciones para escritorio
+  @include breakpoint(medium){
+    .navbar__burger,
+    .navbar__burger[aria-expanded="true"] {
       display: none;
     }
-  }
 
+    #navbar-menu,
+    .navbar__burger[aria-expanded="true"] #navbar-menu {
+      visibility: visible;
+      opacity: 1;
+      position: static;
+      display: block;
+      height: 100%;
+    }
+
+    .navbar__links,
+    .navbar__burger[aria-expanded="true"] #navbar-menu .navbar__links {
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      position: static;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+
+    .navbar__link {
+      padding: rem(12) rem(15);
+    }
+  }
 }
+
+

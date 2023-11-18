@@ -1,31 +1,15 @@
-// Navbar
-const burger = document.querySelector("#hamburger");
-const mobileNavbar = document.querySelector(".navbar__list");
-const mediaX = window.matchMedia("(max-width: 640px)")
+const navbarToggle = header.querySelector(".navbar__burger");
+const burger = header.querySelector(".icon-bar");
+const navbarMenu = document.querySelector("#navbar-menu");
+const navbarLinksContainer = navbarMenu.querySelector(".navbar__links");
+let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
 
-burger.addEventListener("click", (e) => {
-  if (mobileNavbar.style.display == "flex") {
-    mobileNavbar.style.display = 'none';
-  } else {
-    mobileNavbar.style.display = 'flex';
-  }
-});
-burger.addEventListener('focusout', (e) => {
-  if (mobileNavbar.style.display == "flex") {
-    mobileNavbar.style.display = 'none';
-  } else {
-    mobileNavbar.style.display = 'flex';
-  }
-});
+const toggleNavbarVisibility = () => {
+  isNavbarExpanded = !isNavbarExpanded;
+  navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+};
 
-function checkMediaQuery() {
-  // If the inner width of the window is greater then 768px
-  if (window.innerWidth > 856) {
-    mobileNavbar.style.display = 'flex';
-  } else {
-    mobileNavbar.style.display = 'none';
-  }
-}
-// Add a listener for when the window resizes
-window.addEventListener('resize', checkMediaQuery);
+navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
+navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+navbarMenu.addEventListener("click", toggleNavbarVisibility);
