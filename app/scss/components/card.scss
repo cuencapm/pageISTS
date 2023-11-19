@@ -45,7 +45,7 @@
       color: var(--light);
       background: var(--istsazul);
       border-radius: 100vw;
-      font-weight: bold;
+      font-weight: 700;
       padding: 0.8em 1.5em;
       transition: transform 250ms ease, opacity 150ms linear;
     }
@@ -142,4 +142,10 @@
   75%  { top: 0; right: -4px;    }
   87%  { top: -2px; right: -2px; }
   100% { top: -4px; right: 0;    }
+}
+
+// !IMPORTANT - Aos provoca que la tarjeta vaya al fondo, por ello reescribo la clase.
+[data-aos^=zoom][data-aos^=zoom].aos-animate {
+    opacity: 1;
+    transform: none;
 }

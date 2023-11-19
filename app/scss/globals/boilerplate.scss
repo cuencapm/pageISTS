@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -15,14 +16,4 @@ body {
   font-family: var(--font-raleway);
   color: var(--dark);
   background-image: url('../../../images/bg.png');
-  background-size: repeat;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
 }

@@ -17,6 +17,9 @@
     rel="stylesheet">
   <!-- Font awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Animations aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Important files -->
   <link rel="stylesheet" href="/dist/style.css" />
   <script defer src="/dist/script.js"></script>
@@ -44,11 +47,12 @@
     </nav>
   </header>
 
-  <div id="firstTitle" class="title container"> Entorno Virtual de Aprendizaje ISTS </div>
+  <div id="firstTitle" class="title container" data-aos="zoom-in" data-aos-delay="100"> Entorno Virtual de Aprendizaje
+    ISTS </div>
 
   <main id="hero">
-    <section class="container cards">
-      <div class="card card--presencial">
+    <section class="container cards" data-aos="fade-up" data-aos-delay="100">
+      <div class="card card--presencial" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/presencial.svg" alt="Presencial" />
         </div>
@@ -62,7 +66,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--online">
+      <div class="card card--online" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/online.svg" alt="Online" />
         </div>
@@ -76,7 +80,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--machala">
+      <div class="card card--machala" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/machala.svg" alt="Machala" />
         </div>
@@ -90,7 +94,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--continua">
+      <div class="card card--continua" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/continua.svg" alt="Continua" />
         </div>
@@ -104,7 +108,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--correo">
+      <div class="card card--correo" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/gmail.svg" alt="Correo" />
         </div>
@@ -118,7 +122,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--biblioteca">
+      <div class="card card--biblioteca" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/book.svg" alt="Biblioteca" />
         </div>
@@ -133,7 +137,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--academico">
+      <div class="card card--academico" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/aca.svg" alt="Academico" />
         </div>
@@ -147,7 +151,7 @@
         <!-- <div class="card__description"> </div> -->
       </div>
 
-      <div class="card card--recurso">
+      <div class="card card--recurso" data-aos="zoom-in" data-aos-duration="120" data-aos-once="true">
         <div class="card__platform">
           <img class="card__image" src="/images/logos/recurso.svg" alt="Recurso" />
         </div>
@@ -173,17 +177,16 @@
         Reserved
       </div>
       <div class="footer__social">
-        <a href="https://www.facebook.com/ISTSLoja/" target="_blank" class="red"><img src="/images/icons/facebook.svg"
-            alt="facebook"></a>
-        <a href="https://www.tiktok.com/@ists_loja?lang=es" target="_blank" class="red"><img
-            src="/images/icons/tiktok.svg" alt="tiktok"></a>
-        <a href="https://www.instagram.com/istsloja/" target="_blank" class="red"><img src="/images/icons/instagram.svg"
-            alt="instagram"></a>
-        <a href="https://www.youtube.com/channel/UCyPiKg_MjMYdIfzu8W2cFjA" target="_blank" class="red"><img
-            src="/images/icons/youtube.svg" alt="youtube"></a>
+        <a href="https://www.facebook.com/ISTSLoja/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.tiktok.com/@ists_loja?lang=es" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.instagram.com/istsloja/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCyPiKg_MjMYdIfzu8W2cFjA" target="_blank"><i
+            class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
   </footer>
+
+  <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
 
 </body>
 

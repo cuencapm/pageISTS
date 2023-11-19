@@ -40,6 +40,8 @@
     justify-self: center;
     margin-bottom: rem(32);
     display: flex;
+    gap: rem(20);
+    color: var(--istsazul);
 
     @include breakpoint(medium) {
       grid-column-start: 2;
@@ -47,18 +49,14 @@
       margin-bottom: rem(0);
     }
 
-    .red {
-      display: inline-flex;
+    .fa-brands {
+      font-size: rem(40);
+      color: var(--istsazul);
+      &:hover{
+        color: var(--istsverde);
+      }
     }
 
-    img {
-      height: rem(50);
-      width: rem(50);
-      padding: rem(5) rem(8);
-      filter: invert(21%) sepia(21%) saturate(5563%) hue-rotate(203deg) brightness(99%) contrast(93%);
-    }
   }
-
-
-  }
+}
 
