@@ -1,2 +1,65 @@
 @use 'globals';
 @use 'components';
+
+@font-face {
+  font-family: walkway black;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Black'), url(https://fonts.cdnfonts.com/s/468/Walkway_Black.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway bold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Bold'), url(https://fonts.cdnfonts.com/s/468/Walkway_Bold.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway oblique black;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Oblique Black'), url(https://fonts.cdnfonts.com/s/468/Walkway_Oblique_Black.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway oblique bold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Oblique Bold'), url(https://fonts.cdnfonts.com/s/468/Walkway_Oblique_Bold.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway oblique semibold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Oblique SemiBold'), url(https://fonts.cdnfonts.com/s/468/Walkway_Oblique_SemiBold.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway oblique;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Oblique'), url(https://fonts.cdnfonts.com/s/468/Walkway_Oblique.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway oblique ultrabold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway Oblique UltraBold'), url(https://fonts.cdnfonts.com/s/468/Walkway_Oblique_UltraBold.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway semibold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway SemiBold'), url(https://fonts.cdnfonts.com/s/468/Walkway_SemiBold.woff) format('woff')
+}
+
+@font-face {
+  font-family: walkway ultrabold;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Walkway UltraBold'), url(https://fonts.cdnfonts.com/s/468/Walkway_UltraBold.woff) format('woff')
+}
